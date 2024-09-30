@@ -4,14 +4,17 @@ public class Classwork
   {
     String x1 = new String("Dictionary");
     String x2 = new String("apple");
+    String x3 = new String("A moose steak is never a mistake");
     int n = 1;
     firstLastN(x1, n);
     delEnd(x1, n);
+    compareLower(x1, x2);
+    LengthFirst(x3);
   }
 
   public static void firstLastN(String x1, int n)
   {
-    int L = x.length();
+    int L = x1.length();
     String str1 = x1.substring(0,n);
     String str2 = x1.substring(L - n);
     System.out.println(str1 + str2);
@@ -29,7 +32,14 @@ public class Classwork
   {
     String str1 = x1.toLowerCase();
     String str2 = x2.toLowerCase();
-    String output = x1.compareTo(x2);
+    int output = str1.compareTo(str2);
     System.out.println(output);
+  }
+
+  public static void LengthFirst(String x3)
+  {
+    int index = x3.indexOf(" ");
+    String output = x3.substring(0, index);
+    System.out.print(output);
   }
 }
